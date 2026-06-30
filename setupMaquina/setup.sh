@@ -79,6 +79,15 @@ echo "[+] Instalando o editor Zed..."
 curl -f https://zed.dev/install.sh | sh
 
 # ========================================================
+# Instalação Docker
+# ========================================================
+echo "[+] Instalando o Docker..."
+curl -fsSL https://get.docker.com -o get-docker.sh
+sudo sh get-docker.sh
+rm get-docker.sh
+sudo usermod -aG docker $USER
+
+# ========================================================
 # Instalação Input-Remapper (.deb)
 # ========================================================
 echo "[+] Baixando e instalando input-remapper..."
