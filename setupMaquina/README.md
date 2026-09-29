@@ -4,24 +4,33 @@ Criado para toda vez que estiver em uma máquina nova ou fizer a formatação do
 
 ## 📦 O que este script instala?
 
-**Utilitários Básicos & Banco de Dados (APT):**
-- `curl`, `wget`, `git`, `unzip`, `build-essential`
+**Base e Ferramentas do Sistema (APT):**
+- `curl`, `wget`, `git`, `unzip`, `build-essential`, `dkms`, `ca-certificates`, `ca-certificates-java`
 - `postgresql`, `postgresql-contrib`
-- `python3`, `python3-pip`
-- `input-remapper` (via .deb)
+- `openjdk-17-jdk`, `maven`
+- `xclip`
+- `gnome-terminal`, `gnome-system-monitor`, `neofetch`
+- `libreoffice` (pt-BR)
+- `firefox`
 
-**Aplicativos & Ferramentas (SNAP):**
+**Aplicativos (SNAP):**
 - Brave Browser
 - Insomnia
-- Obsidian
-- IntelliJ IDEA Community
 - GitHub CLI (`gh`)
+- Docker
+
+**Repositório externo:**
+- Claude Desktop
+
+**Editores e IDEs:**
+- **Eclipse IDE** 2026-06 + **Spring Tool Suite** 5.4.0 (`~/.local/opt`, com JRE próprio)
+- **Neovim** (última versão, via tarball oficial)
 
 **Ecossistemas de Desenvolvimento:**
-- **Node.js**: NVM e Node.js (v24)
-- **Rust**: rustup, rustc e cargo
-- **PHP**: PHP 8.4 (com extensões essenciais) e Composer
-- **Code Editor**: Zed
+- **Node.js**: NVM v0.40.8 e Node.js v24
+- **Java**: OpenJDK 17 e Maven
+- **uv** (gerenciador de pacotes Python)
+- **Claude**: Claude Code (CLI) e Claude Desktop
 
 ## 🚀 Como usar
 
@@ -35,4 +44,6 @@ chmod +x setup.sh
 ./setup.sh
 ```
 
-> **Nota:** É recomendado reiniciar o terminal após a execução do script para carregar as variáveis de ambiente (como o NVM e o Rust).
+> **Nota:** É recomendado reiniciar o terminal após a execução do script para carregar as variáveis de ambiente (como as do NVM e do `JAVA_HOME`).
+
+> **Nota:** o script é idempotente — pacotes e programas já instalados são apenas pulados, então pode rodar novamente com segurança.
